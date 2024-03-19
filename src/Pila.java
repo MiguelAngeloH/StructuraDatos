@@ -14,11 +14,22 @@ public class Pila {
         ultimo = nuevo;
         tamanio ++;
     }
-    public void pop(){
-        int temp =
+    public int pop(){
+        int temp =ultimo.dato;
+        ultimo = ultimo.siguiente;
+        tamanio --;
+        return temp;
     }
-    public void peek(){}
-    public void size(){}
-    public  void  clear(){}
+    public int peek(){
+        return  ultimo.dato;
+    }
+    public int size(){
+        return tamanio;
+    }
+    public  void  clear(){
+        while(!empty()){
+            pop();
+        }
+    }
 
 }
